@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("nanoFramework.Graphics.Ili9488")]
 [assembly: AssemblyCompany("nanoFramework Contributors")]
 [assembly: AssemblyProduct("nanoFramework.System.Text")]
-[assembly: AssemblyCopyright("Copyright © nanoFramework Contributors 2023")]
+[assembly: AssemblyCopyright("Copyright © nanoFramework Contributors 2026")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
