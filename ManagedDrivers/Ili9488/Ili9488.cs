@@ -100,7 +100,6 @@ namespace nanoFramework.UI.GraphicDrivers
                             (byte)GraphicDriverCommandType.Command, 3, (byte)ILI9488_CMD.Power_Control_1, 0x17, 0x15,
                             (byte)GraphicDriverCommandType.Command, 2, (byte)ILI9488_CMD.Power_Control_2, 0x41,
                             (byte)GraphicDriverCommandType.Command, 4, (byte)ILI9488_CMD.VCOM_Control_1,  0x00, 0x12, 0x80,
-                            (byte)GraphicDriverCommandType.Command, 2, (byte)ILI9488_CMD.Memory_Access_Control, 0x40, // 0x40 = MADCTL_MX (0x40) + MADCTL_RGB (0x00)
                             (byte)GraphicDriverCommandType.Command, 2, (byte)ILI9488_CMD.Pixel_Format_Set, 0x66, // 18 bit SPI
                             (byte)GraphicDriverCommandType.Command, 16, (byte)ILI9488_CMD.Positive_Gamma_Correction, 0x00, 0x03, 0x09, 0x08, 0x16, 0x0A, 0x3F, 0x78, 0x4C, 0x09, 0x0A, 0x08, 0x16, 0x1A, 0x0F,
                             (byte)GraphicDriverCommandType.Command, 16, (byte)ILI9488_CMD.Negative_Gamma_Correction, 0x00, 0x16, 0x19, 0x03, 0x0F, 0x05, 0x32, 0x45, 0x46, 0x04, 0x0E, 0x0D, 0x35, 0x37, 0x0F,
