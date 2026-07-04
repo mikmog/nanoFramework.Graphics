@@ -61,14 +61,40 @@ namespace nanoFramework.UI.GraphicDrivers
 
         private enum ILI9488_Orientation
         {
-            MADCTL_MH = 0x04, // sets the Horizontal Refresh, 0=Left-Right and 1=Right-Left
-            MADCTL_ML = 0x10, // sets the Vertical Refresh, 0=Top-Bottom and 1=Bottom-Top
-            MADCTL_MV = 0x20, // sets the Row/Column Swap, 0=Normal and 1=Swapped
-            MADCTL_MX = 0x40, // sets the Column Order, 0=Left-Right and 1=Right-Left
-            MADCTL_MY = 0x80, // sets the Row Order, 0=Top-Bottom and 1=Bottom-Top
+            /// <summary>
+            /// Sets the Horizontal Refresh, 0=Left-Right and 1=Right-Left
+            /// </summary>
+            MADCTL_MH = 0x04,
 
-            MADCTL_BGR = 0x08, // Blue-Green-Red pixel order
-            MADCTL_RGB = 0x00  // Red-Green-Blue pixel order
+            /// <summary>
+            /// Sets the Vertical Refresh, 0=Top-Bottom and 1=Bottom-Top
+            /// </summary>
+            MADCTL_ML = 0x10,
+
+            /// <summary>
+            /// Sets the Row/Column Swap, 0=Normal and 1=Swapped
+            /// </summary>
+            MADCTL_MV = 0x20,
+
+            /// <summary>
+            /// Sets the Column Order, 0=Left-Right and 1=Right-Left
+            /// </summary>
+            MADCTL_MX = 0x40,
+
+            /// <summary>
+            /// Sets the Row Order, 0=Top-Bottom and 1=Bottom-Top
+            /// </summary>
+            MADCTL_MY = 0x80,
+
+            /// <summary>
+            /// Blue-Green-Red pixel order
+            /// </summary>
+            MADCTL_BGR = 0x08,
+
+            /// <summary>
+            /// Red-Green-Blue pixel order
+            /// </summary>
+            MADCTL_RGB = 0x00
         };
 
         /// <summary>
@@ -100,7 +126,7 @@ namespace nanoFramework.UI.GraphicDrivers
                             (byte)GraphicDriverCommandType.Command, 3, (byte)ILI9488_CMD.Power_Control_1, 0x17, 0x15,
                             (byte)GraphicDriverCommandType.Command, 2, (byte)ILI9488_CMD.Power_Control_2, 0x41,
                             (byte)GraphicDriverCommandType.Command, 4, (byte)ILI9488_CMD.VCOM_Control_1,  0x00, 0x12, 0x80,
-                            (byte)GraphicDriverCommandType.Command, 2, (byte)ILI9488_CMD.Pixel_Format_Set, 0x66, // 18 bit SPI
+                            (byte)GraphicDriverCommandType.Command, 2, (byte)ILI9488_CMD.Pixel_Format_Set, 0x66, // 18-bit. Native generic driver supports 18-bit transfers via conversion to RGB666
                             (byte)GraphicDriverCommandType.Command, 16, (byte)ILI9488_CMD.Positive_Gamma_Correction, 0x00, 0x03, 0x09, 0x08, 0x16, 0x0A, 0x3F, 0x78, 0x4C, 0x09, 0x0A, 0x08, 0x16, 0x1A, 0x0F,
                             (byte)GraphicDriverCommandType.Command, 16, (byte)ILI9488_CMD.Negative_Gamma_Correction, 0x00, 0x16, 0x19, 0x03, 0x0F, 0x05, 0x32, 0x45, 0x46, 0x04, 0x0E, 0x0D, 0x35, 0x37, 0x0F,
                             (byte)GraphicDriverCommandType.Command, 2, (byte)ILI9488_CMD.Interface_Signal_Control, 0x80,

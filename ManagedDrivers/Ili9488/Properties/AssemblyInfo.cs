@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 [assembly: AssemblyTitle("nanoFramework.Graphics.Ili9488")]
 [assembly: AssemblyCompany("nanoFramework Contributors")]
-[assembly: AssemblyProduct("nanoFramework.System.Text")]
+[assembly: AssemblyProduct("nanoFramework.Graphics.Ili9488")]
 [assembly: AssemblyCopyright("Copyright © nanoFramework Contributors 2026")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
